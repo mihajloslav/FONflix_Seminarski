@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dobrodošli na Fonflix - Vaš omiljeni kutak za filmsku čaroliju">
+    <meta name="description" content="Pogledajte naš repertoar filmova.">
     <meta name="keywords" content="Fonflix, bioskop, filmovi, zabava">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,9 +13,8 @@
 <link rel="icon" type="image/x-icon" href="../assets/img/logo-top.ico"/>
 <title>Fonflix - Filmovi</title>
 </head>
-<body onload="viewForm()">
+<body onload="Resize()">
     <header>
-        <!-- Start bottom header section -->
         <div id="main-header">
             <div class="center-block navbar-wrapper space-between">
                 <div id="logo">
@@ -24,7 +23,7 @@
                 <nav>
                     <ul class="navbar-wrapper">
                         <li class="burger">
-                            <img src="../assets/img/logo-small.png" onclick="ToggleBurger()"></img> 
+                            <img src="../assets/img/burger.svg" onclick="ToggleBurger()"></img> 
                         </li>
                         <li >
                             <a href="index.html" class="nav-button nav-link">Početna</a>
@@ -55,8 +54,6 @@
                 <button onclick="hide(3)">H</button>
                 <button onclick="hide(4)">K</button>
             </div>
-            </div>
-            </div>
         </div>
     </section>
     <section id="gallery" class="movies">
@@ -70,7 +67,7 @@
             <div class="row wrapper space-between">
                 <div class="gallery-image">
                     <a href="../assets/img/endgame.webp">
-                        <img class="gallery-image-img" src="../assets/img/endgame.webp" alt="Slika-1"/>
+                        <img class="gallery-image-img" src="../assets/img/endgame.webp" alt="Avengers Endgame"/>
                         <div class="gallery-info">
                             <h4>Avengers Endgame</h4>
                             <small>3h 2min</small>
@@ -79,7 +76,7 @@
                 </div>
                 <div class="gallery-image">
                     <a href="../assets/img/jonhwick.webp">
-                        <img class="gallery-image-img" src="../assets/img/jonhwick.webp" alt="Slika-2"/>
+                        <img class="gallery-image-img" src="../assets/img/jonhwick.webp" alt="Jonh Wick"/>
                         <div class="gallery-info">
                             <h4>Jonh Wick</h4>
                             <small>1h 41min</small>
@@ -88,7 +85,7 @@
                 </div>
                 <div class="gallery-image">
                     <a href="../assets/img/fastx.webp">
-                        <img class="gallery-image-img" src="../assets/img/fastx.webp" alt="Slika-3"/>
+                        <img class="gallery-image-img" src="../assets/img/fastx.webp" alt="Fast And Furious x"/>
                         <div class="gallery-info">
                             <h4>Fast and Furious X</h4>
                             <small>2h 21min</small>
@@ -97,7 +94,7 @@
                 </div>
                 <div class="gallery-image">
                     <a href="../assets/img/oppenheimer.webp">
-                        <img class="gallery-image-img" src="../assets/img/oppenheimer.webp" alt="Slika-4"/>
+                        <img class="gallery-image-img" src="../assets/img/oppenheimer.webp" alt="Oppenheimer"/>
                         <div class="gallery-info">
                             <h4>Oppenheimer</h4>
                             <small>3h</small>
@@ -117,7 +114,7 @@
             <div class="row wrapper space-between">
                 <div class="gallery-image">
                     <a href="../assets/img/brightburn.webp">
-                        <img class="gallery-image-img" src="../assets/img/brightburn.webp" alt="Slika-1"/>
+                        <img class="gallery-image-img" src="../assets/img/brightburn.webp" alt="Brightburn"/>
                         <div class="gallery-info">
                             <h4>Brightburn</h4>
                             <small>1h 30min</small>
@@ -126,7 +123,7 @@
                 </div>
                 <div class="gallery-image">
                     <a href="../assets/img/poltergeist.webp">
-                        <img class="gallery-image-img" src="../assets/img/poltergeist.webp" alt="Slika-2"/>
+                        <img class="gallery-image-img" src="../assets/img/poltergeist.webp" alt="Poltergeist"/>
                         <div class="gallery-info">
                             <h4>Poltergeist</h4>
                             <small>1h 54min</small>
@@ -135,7 +132,7 @@
                 </div>
                 <div class="gallery-image">
                     <a href="../assets/img/conjuring.webp">
-                        <img class="gallery-image-img" src="../assets/img/conjuring.webp" alt="Slika-3"/>
+                        <img class="gallery-image-img" src="../assets/img/conjuring.webp" alt="Conjuring"/>
                         <div class="gallery-info">
                             <h4>Conjuring</h4>
                             <small>1h 52min</small>
@@ -144,7 +141,7 @@
                 </div>
                 <div class="gallery-image">
                     <a href="../assets/img/nun2.webp">
-                        <img class="gallery-image-img" src="../assets/img/nun2.webp" alt="Slika-4"/>
+                        <img class="gallery-image-img" src="../assets/img/nun2.webp" alt="The Nun 2"/>
                         <div class="gallery-info">
                             <h4>The Nun 2</h4>
                             <small>1h 50min</small>
@@ -164,7 +161,7 @@
             <div class="row wrapper space-between">
                 <div class="gallery-image">
                     <a href="../assets/img/freeguy.webp">
-                        <img class="gallery-image-img" src="../assets/img/freeguy.webp" alt="Slika-1"/>
+                        <img class="gallery-image-img" src="../assets/img/freeguy.webp" alt="Free Guy"/>
                         <div class="gallery-info">
                             <h4>Free Guy</h4>
                             <small>1h 55min</small>
@@ -173,7 +170,7 @@
                 </div>
                 <div class="gallery-image">
                     <a href="../assets/img/supermario.webp">
-                        <img class="gallery-image-img" src="../assets/img/supermario.webp" alt="Slika-2"/>
+                        <img class="gallery-image-img" src="../assets/img/supermario.webp" alt="Super Mario Bros"/>
                         <div class="gallery-info">
                             <h4>Super Mario Bros</h4>
                             <small>1h 32min</small>
@@ -182,7 +179,7 @@
                 </div>
                 <div class="gallery-image">
                     <a href="../assets/img/theburbs.webp">
-                        <img class="gallery-image-img" src="../assets/img/theburbs.webp" alt="Slika-3"/>
+                        <img class="gallery-image-img" src="../assets/img/theburbs.webp" alt="The Burbs"/>
                         <div class="gallery-info">
                             <h4>The Burbs</h4>
                             <small>1h 51min</small>
@@ -191,7 +188,7 @@
                 </div>
                 <div class="gallery-image">
                     <a href="../assets/img/escapefromearth.webp">
-                        <img class="gallery-image-img" src="../assets/img/escapefromearth.webp" alt="Slika-4"/>
+                        <img class="gallery-image-img" src="../assets/img/escapefromearth.webp" alt="Escape From Planet Earth"/>
                         <div class="gallery-info">
                             <h4>Escape From The Planet Earth</h4>
                             <small>1h 29min</small>

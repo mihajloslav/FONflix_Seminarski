@@ -31,6 +31,12 @@ ul{
     display: flex;
     flex-wrap: wrap;
 }
+
+
+.navbar-li {
+    display: none;
+}
+
 .navbar-wrapper{
     display: flex;
     flex-wrap: wrap;
@@ -41,6 +47,7 @@ ul{
 .burger{
     width: 40px;
     height: 40px;
+    margin-bottom: 10px;
     display: none;
 }
 
@@ -98,13 +105,23 @@ nav ul{
     text-align: center;
 }
 
+
+.grid_wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 100%));
+    width: 100%;
+    gap: 5px;
+}
+
 /*Filmovi*/
 .gallery-image{
-    width: 23%;
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    grid-column: span 3 / span 3;
 }
+
+
 .gallery-image img{
     width: 100%;
     border-radius: 5px;
@@ -171,21 +188,35 @@ nav ul{
     text-align: center;
     padding: 40px 0px;
 }
+.heading h1{
+    text-transform: capitalize;
+    font-size: 32px;
+    color:black;
+}
 .heading h3{
     text-transform: capitalize;
     font-size: 32px;
+    color:black;
 }
 .row{
     padding-bottom: 40px;
 }
 
+
 /*Lokacija*/
-#location-img{
+.location-img{
     width: 48px;
     height: 48px;
     margin-right: 10px;
     word-wrap: break-word;
 }
+
+.img_wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
 #location{
     padding-bottom: 5%;
 }
@@ -201,14 +232,7 @@ nav ul{
 .info{
     max-width: 500px;
 }
-footer{
-    /*position: fixed;
-    width: 100%;
-    bottom: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #f0f0f0;*/
-}
+
 #timetable{
     width: 400px;
     height: 250px;
@@ -217,23 +241,23 @@ footer{
 .info-card{
     border-radius: 10px;
     background-color: #f0f0f0;
-    padding: 15px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
+
 h1{
     color:white;
     margin-bottom: 20px;
 }
 #catalog-button{
-    transform: rotateX(180deg);
     text-decoration: none;
     color:white;
     padding: 10px;
     background-color: #6c24d1;
     border-radius: 20px;
-}
-#catalog-button:hover{
-    transform: scale(2,2);
-    transition: ease 2s;
+    animation: catalog 3s infinite;
 }
 .gallery-image-img{
     width: 320px;
@@ -241,9 +265,42 @@ h1{
 }
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
+    .gallery-image{
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        grid-column: span 6 / span 6;
+        width: 300px;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .gallery-image{
+        width: 350px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        grid-column: span 12 / span 12;
+        margin-left: 75px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #pickgenre {
+        padding-left: 10px;
+        padding-right: 10px; 
+    }
+
+    #pickgenre button {
+        margin-left: -25px; 
+    }
     .burger{
         display: unset;
+    }
+    .navbar-li {
+        margin-bottom: 10px;
     }
     
     .burger img{
@@ -251,23 +308,45 @@ h1{
     }
 
     .navbar-wrapper {
-flex-direction: column;
+        flex-direction: column;
     }
 
     .wrapper{
         flex-direction: column;
     }
-    .gallery-image-img{
-        width: 200px;
-        height: 320px;
+    #main-header {
+        padding-top: 20px; 
     }
-    .gallery-image{
-        width: 100%;
-        padding-bottom: 20px;
-      
+
+    .navbar-wrapper, .wrapper {
+        flex-direction: column;
+        align-items: center; 
     }
-    .navbar-wrapper li{
-        margin-bottom: 5px;
+
+    #logo {
+        margin: 10px auto;
+    }
+
+    .gallery-image {
+        width: calc(100% - 20px); 
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        grid-column: span 12 / span 12;
+        margin: 10px;
+    }
+    main {
+        padding-top: 60px; 
+    }
+
+    .gallery-image-img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .gallery-info h4, .gallery-info small {
+        transform: translateY(0);
+        opacity: 0;
     }
     #logo{
     margin: auto;
@@ -275,11 +354,127 @@ flex-direction: column;
     #timetable{
         width: 100%;
     }
-    info-card{
-        
+    main{
+        padding-top: 100px;
+    }
+    .location-info {
+        max-width: 100%;
+    }
+
+    .info-card {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .img_wrap {
+        margin-bottom: 0; 
+    }
+
+    .info-card iframe {
+        width: 100%; 
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    #hero-section h1{
+        font-size: 15px;
+    }
+    #pickgenre {
+        padding-left: 10px;
+        padding-right: 10px; 
+    }
+
+    #pickgenre button {
+        margin-left: -25px; 
+    }
+    .burger{
+        display: unset;
+    }
+    .navbar-li {
+        margin-bottom: 10px;
+    }
+    
+    .burger img{
+        display: unset;
+    }
+
+    .navbar-wrapper {
+        flex-direction: column;
+    }
+
+    .wrapper{
+        flex-direction: column;
+    }
+    #main-header {
+        padding-top: 20px; 
+    }
+
+    .navbar-wrapper, .wrapper {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    #logo {
+        margin: 10px auto;
+    }
+
+    .gallery-image {
+        width: calc(100% - 20px); 
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        grid-column: span 12 / span 12;
+        margin: 10px;
+    }
+    main {
+        padding-top: 60px; 
+    }
+
+    .gallery-image-img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .gallery-info h4, .gallery-info small {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    #logo{
+    margin: auto;
+    }
+    #timetable{
+        width: 100%;
     }
     main{
         padding-top: 100px;
     }
-    
+    .location-info {
+        max-width: 100%;
+    }
+
+    .info-card {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .img_wrap {
+        margin-bottom: 0; 
+    }
+
+    .info-card iframe {
+        width: 100%; 
+    }
   }
+
+@keyframes catalog {
+    0% {
+        background-color: var(--darkPurple);
+    }
+    50% {
+        background-color: var(--lightPurple);
+    }
+    100% {
+        background-color: var(--darkPurple);
+    }
+}

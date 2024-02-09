@@ -11,9 +11,8 @@
     <link rel="icon" type="image/x-icon" href="../assets/img/logo-top.ico"/>
     <title>Fonflix</title>
 </head>
-<body  onload="viewForm()">
+<body  onload="Resize()">
     <header>
-        <!-- Start bottom header section -->
         <div id="main-header">
             <div class="center-block wrapper space-between">
                 <div id="logo">
@@ -22,7 +21,7 @@
                 <nav>
                     <ul class="navbar-wrapper">
                         <li class="burger">
-                            <img src="../assets/img/logo-small.png" onclick="ToggleBurger()"></img> 
+                            <img src="../assets/img/burger.svg" onclick="ToggleBurger()"></img> 
                         </li>
                         <li class="navbar-li">
                             <a href="nav-button index.html" class="nav-button nav-link">Početna</a>
@@ -57,10 +56,10 @@
                     Najgledaniji filmovi<span class="color-text"> trenutno </span>
                 </h3>
             </div>
-            <div class="row wrapper space-between">
+            <div class="row grid_wrapper">
                 <div class="gallery-image">
                     <a href="../assets/img/endgame.webp">
-                        <img class="gallery-image-img" src="../assets/img/endgame.webp" alt="Slika-1"/>
+                        <img class="gallery-image-img" src="../assets/img/endgame.webp" alt="Avengers Endgame"/>
                         <div class="gallery-info">
                             <h4>Avengers Endgame</h4>
                             <small>3h 2min</small>
@@ -69,7 +68,7 @@
                 </div>
                 <div class="gallery-image">
                     <a href="../assets/img/supermario.webp">
-                        <img class="gallery-image-img" src="../assets/img/supermario.webp" alt="Slika-2"/>
+                        <img class="gallery-image-img" src="../assets/img/supermario.webp" alt="Super Mario Bros"/>
                         <div class="gallery-info">
                             <h4>Super Mario Bros</h4>
                             <small>1h 32min</small>
@@ -78,7 +77,7 @@
                 </div>
                 <div class="gallery-image">
                     <a href="../assets/img/conjuring.webp">
-                        <img class="gallery-image-img" src="../assets/img/conjuring.webp" alt="Slika-3"/>
+                        <img class="gallery-image-img" src="../assets/img/conjuring.webp" alt="Conjuring"/>
                         <div class="gallery-info">
                             <h4>Conjuring</h4>
                             <small>1h 52min</small>
@@ -87,7 +86,7 @@
                 </div>
                 <div class="gallery-image">
                     <a href="../assets/img/nun2.webp">
-                        <img class="gallery-image-img" src="../assets/img/nun2.webp" alt="Slika-4"/>
+                        <img class="gallery-image-img" src="../assets/img/nun2.webp" alt="The Nun 2"/>
                         <div class="gallery-info">
                             <h4>The Nun 2</h4>
                             <small>1h 50min</small>
@@ -104,15 +103,19 @@
             </div>
             <div class="row wrapper space-between">
                 <div class="wrapper info-card">
-                    <img id="location-img" src="../assets/img/exclamation.png" alt="Location image"/>
-                    <div id="location-info">
+                    <div class="img_wrap">
+                        <img class="location-img" src="../assets/img/exclamation.png" alt="Location image"/>
+                    </div>
+                    <div class="location-info">
                         <h4 class="info">Prve projekcije radnim danom počinju u 16h ili 17h (zavisi o bioskopu), a poslednje počinju do 23h. Prve projekcije vikendom i praznicima počinju u 11h, a poslednje do 23h. Cinema Barovi su otvoreni i rade svaki dan.</h4>
                         <img id="timetable" src="../assets/img/timeline.png" alt="">
                     </div>
                 </div>
                 <div class="wrapper info-card">
-                        <img id="location-img" src="../assets/img/location.png" alt="Location image"/>
-                    <div id="location-info">
+                    <div class="img_wrap">
+                        <img class="location-img" src="../assets/img/location.png" alt="Location image"/>
+                    </div>
+                    <div class="location-info">
                         <h4>FONflix se nalazi na Fakultetu Organizacionih Nauka u ulici:<br>
                             Jove Ilića 154, Beograd 11000</h4>
                         <iframe id="gmap" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11329.593775673055!2d20.4752233!3d44.7726817!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a70576248bf79%3A0xadaf5cff042d3bd0!2sFaculty%20of%20Organizational%20Sciences!5e0!3m2!1sen!2srs!4v1699911514960!5m2!1sen!2srs" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
