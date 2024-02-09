@@ -3,38 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dobrodošli na Fonflix - Vaš omiljeni kutak za filmsku čaroliju">
+    <meta name="keywords" content="Fonflix, bioskop, filmovi, zabava">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo-top.ico"/>
     <title>Fonflix</title>
 </head>
-<body>
+<body  onload="viewForm()">
     <header>
         <!-- Start bottom header section -->
         <div id="main-header">
-            <div class="center-block navbar-wrapper space-between">
+            <div class="center-block wrapper space-between">
                 <div id="logo">
                     <a href="index.html"><img id="logo-img" src="../assets/img/fonflixlogosmall.webp" alt=""></a>
                 </div>
                 <nav>
                     <ul class="navbar-wrapper">
-                        <li class="active-link">
-                            <a href="index.html">Početna</a>
+                        <li class="burger">
+                            <img src="../assets/img/logo-small.png" onclick="ToggleBurger()"></img> 
                         </li>
-                        <li>
-                            <a href="../html/filmovi.html" class="nav-link">Filmovi</a> 
+                        <li class="navbar-li">
+                            <a href="nav-button index.html" class="nav-button nav-link">Početna</a>
                         </li>
-                        <li>
-                            <a href="onama.html" class="nav-link">O nama</a>
+                        <li class="navbar-li">
+                            <a href="../html/filmovi.html" class="nav-button nav-link">Filmovi</a> 
                         </li>
-                        <li>
-                            <a href="rezervacije.html" class="nav-link">Rezervacija</a>
+                        <li class="navbar-li">
+                            <a href="onama.html" class="nav-button nav-link">O nama</a>
+                        </li>
+                        <li class="navbar-li">
+                            <a href="rezervacije.html" class="nav-button nav-link">Rezervacija</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
+    <div class="expand-on-mobile"></div>
+    <main>
+        <div class="expand-on-mobile"></div>
     <section id="hero-section">
 
         <h1>Omiljeni bioskop studenata.</h1>
@@ -50,38 +59,38 @@
             </div>
             <div class="row wrapper space-between">
                 <div class="gallery-image">
-                    <a href="../assets/img/slika.jpg">
-                        <img class="gallery-image-img" src="../assets/img/endgame.jpeg" alt="Slika-1"/>
+                    <a href="../assets/img/endgame.webp">
+                        <img class="gallery-image-img" src="../assets/img/endgame.webp" alt="Slika-1"/>
                         <div class="gallery-info">
                             <h4>Avengers Endgame</h4>
-                            <small>Podnaslov</small>
+                            <small>3h 2min</small>
                         </div>
                     </a>
                 </div>
                 <div class="gallery-image">
-                    <a href="../assets/img/slika.jpg">
-                        <img class="gallery-image-img" src="../assets/img/supermario.jpeg" alt="Slika-2"/>
+                    <a href="../assets/img/supermario.webp">
+                        <img class="gallery-image-img" src="../assets/img/supermario.webp" alt="Slika-2"/>
                         <div class="gallery-info">
                             <h4>Super Mario Bros</h4>
-                            <small>Podnaslov</small>
+                            <small>1h 32min</small>
                         </div>
                     </a>
                 </div>
                 <div class="gallery-image">
-                    <a href="../assets/img/slika.jpg">
-                        <img class="gallery-image-img" src="../assets/img/conjuring.jpg" alt="Slika-3"/>
+                    <a href="../assets/img/conjuring.webp">
+                        <img class="gallery-image-img" src="../assets/img/conjuring.webp" alt="Slika-3"/>
                         <div class="gallery-info">
                             <h4>Conjuring</h4>
-                            <small>Podnaslov</small>
+                            <small>1h 52min</small>
                         </div>
                     </a>
                 </div>
                 <div class="gallery-image">
-                    <a href="../assets/img/slika.jpg">
-                        <img class="gallery-image-img" src="../assets/img/nun2.jpeg" alt="Slika-4"/>
+                    <a href="../assets/img/nun2.webp">
+                        <img class="gallery-image-img" src="../assets/img/nun2.webp" alt="Slika-4"/>
                         <div class="gallery-info">
                             <h4>The Nun 2</h4>
-                            <small>Podnaslov</small>
+                            <small>1h 50min</small>
                         </div>
                     </a>
                 </div>
@@ -112,6 +121,7 @@
             </div>
         </div>
     </section>
+</main>
     <footer>
         <div class="center-block">
             <center>
