@@ -36,7 +36,6 @@ ul{
     background-color: #f0f0f0;
     position: fixed;
     width: 100%;
-    z-index: 3;
     
 }
 #logo h1{
@@ -69,7 +68,9 @@ nav ul{
     text-align: center;
 }
 
-
+.movies{
+    padding-top:5%;
+}
 
 /*Filmovi*/
 .gallery-image{
